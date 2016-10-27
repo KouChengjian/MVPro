@@ -18,4 +18,9 @@
         </activity>
     </application>
 
+    <meta-data
+        android:name="channelname"
+        android:value="channelkey" >
+    </meta-data>
+
 </manifest>

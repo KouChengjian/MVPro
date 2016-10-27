@@ -1,5 +1,6 @@
 package org.loader.mvprotest;
 
+import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -10,6 +11,12 @@ import java.util.ArrayList;
 public class MainActivity extends ActivityPresenterImpl<DataListView>
         implements AdapterView.OnItemClickListener, View.OnClickListener {
 
+	@Override
+	public void created(Bundle savedInstance) {
+		super.created(savedInstance);
+		
+	}
+	
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         mView.toast(position);
@@ -17,8 +24,10 @@ public class MainActivity extends ActivityPresenterImpl<DataListView>
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.newdata) newData();
-        else getData();
+        if(v.getId() == R.id.newdata) 
+        	newData();
+        else 
+        	getData();
     }
 
     private void newData() {
